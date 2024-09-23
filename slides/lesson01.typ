@@ -138,12 +138,158 @@
   #figure(image("images/MB-explained.png", width:40%))
 ]
 
-#slide(title:"Motherboard (2)")[]
+#slide(title:"Motherboard (2)")[
+  - #alert[Peripheral Component Interconnect]
+  - Expansion slot used for connecting expansion cards to a computer's motherboard
+  - These expansion cards provide additional functionality or capabilities to a computer system
 
-#slide(title:"Motherboard (3)")[]
+  #side-by-side[
+    - Different types of PCI, for example: PCI and PCI/e
+    - PCI/e not backward compatible with PCI
+    - Different bandwidth (MB/s vs GB/s)
+  ][
+    #figure(image("images/pci.jpeg", width:80%))
+  ]
+]
 
-#slide(title:"Motherboard (4)")[]
+#slide(title:"Motherboard (3)")[
+ #align(center)[ === Examples of cards for PCI ]
+  #v(2em)
+ #side-by-side[
+  #align(center)[
+    Graphics processing unit
+    #figure(image("images/gpu.jpeg", width: 75%))]
+ ][
+  #align(center)[
+    Ethernet card
+    #figure(image("images/ethernet.png", width: 95%))]
+ ][
+  #align(center)[
+    Wi-Fi Card
+    #figure(image("images/wifi.png", width: 50%))]
+ ]
+]
 
-#slide(title:"Connectors")[]
+#slide(title:"Motherboard (4)")[
+  - There are #alert[different types] of motherboards designed for different applications: 
+    - Multiple PCI Express slots for multiple GPUs, for example for HPC, Deep Learning, Mining, ...
+    - ATX (Advanced Technology eXtended) for desktop computers
+      - Different shapes and sizes
+    - Motherboards built for embedded systems, rackmount servers, mobiles, vehicles, ...
+  #figure(image("images/atx.jpg", width: 45%))
+]
 
-#slide(title:"Central Processing Unit (CPU)")[]
+#slide(title:"Connectors")[
+  - Huge #alert[variety] of #alert[connectors] are available for different uses:
+    - #alert[Video] (VGA, HDMI, DisplayPort, ...)
+    - #alert[Data] (Fireware, USB, ...)
+    - ...
+  - This is so for several reasons, for instance #alert[technological] and #alert[marketing]
+ 
+  #side-by-side[
+  - EU started to #alert[regulate] the connector market
+      - iPhone 15, from lightning to USB-c
+  ][
+  #figure(image("images/connectors.jpeg", width: 60%))]
+]
+
+#slide(title:"Central Processing Unit (CPU)")[
+  - #alert[Brain] of a system, every single #alert[operation] that you do with the computer is #alert[processed] by the CPU
+  - A CPU controls the following functions:
+    - #alert[Instruction management]
+      - Fetching and interpretation of the program instructions
+    - #alert[Data computation]
+      - Computation of binary operations that belong, for example, to the arithmetic logic (but not only)
+    - #alert[Data memorization]
+      - Permanent and volatile data memorization
+    - #alert[Data transfer]
+      - Input and output functionalities
+
+  #place(right, dy:-5.5em)[
+    #figure(image("images/cpus.png", width:40%))
+  ]
+
+]
+
+
+#slide(title:"Central Processing Unit (2)")[
+  #align(center)[The CPU is programmed as a #alert[Finite State Machine] (FSM) with 3 states]
+  #figure(image("images/cpu-cycle.png", width:66%))
+]
+
+#slide(title:"Central Processing Unit (3)")[
+  - There are 3 types of instructions run by the CPU
+    - #alert[ALU operations]: all the omputations on the data through the computation unit (Arithmetic Logic Unit)
+    - #alert[Load/Store operations]: I/O operations in memories and I/O devices
+    - #alert[Control operations]:  all the operations to control the internal units of the CPU and the ones needed by the Operating System
+]
+
+#slide(title:"Central Processing Unit (4)")[
+  #side-by-side[
+    - Two main units:
+      - #alert[Control Unit] (CU)
+      - #alert[Arithmetic Logic Unit] (ALU)
+    - A CPU has also several internal memories called #alert[registers]
+    - A CPU communicates with memories and other devices through the #alert[BUS] 
+  ][ 
+    #figure(image("images/cpu-arch.jpg", width: 90%))
+  ]
+]
+
+#slide(title:"Central Processing Unit (5)")[
+  - We can see the Control Unit, as the name suggests, as the #alert[main controller] of all operations
+  - The ALU is the #alert[real worker], who works to complete the instructions received
+  - #alert[Registers] are essential in order to get and store data and instructions
+    - Registers are #alert[inside] the CPU
+    - Registers are the #alert[fastest] memory type
+    - Registers are #alert[very small]
+  - Without the CU, the ALU is not able to work
+]
+
+#slide(title:"A 1-bit ALU")[
+   #figure(image("images/1b-alu.png", width: 45%))
+]
+
+#slide(title:"Control Unit")[
+  - It #alert[directs the operations] of the other units by providing #alert[timing] and #alert[control signals]
+  - It tells the computer's memory, arithmetic logic unit and input and output devices how to respond to the instructions that have been sent to the processor
+  - There are two types of CUs:
+    - #alert[Hardwired]: they are implemented through use of combinational logic units, featuring a finite number of gates that can generate specific results
+    - #alert[Microprogrammed]: the CU has a special control memory to store microinstructions. Therefore, the control operations are not done directly by hardware, but they are a sort of program, called microprogram.
+]
+
+#slide(title:"Control Unit: Hardwired vs Microprogrammed")[
+  - #alert[Hardwired]
+    - Generally faster than the microprogrammed ones
+    - Fixed architecture: it requires changes in the wiring if the instruction set is modified or changed
+    - High speed but very limited flexibility
+  - #alert[Microprogrammed]
+    - Simplicity of its structure
+    - Microprogram can be debugged and replaced very like software
+    - Flexibility
+
+]
+
+#slide(title:"Memory")[
+  #side-by-side[
+    - A memory is the place in which #alert[information is stored]
+    - The #alert[basic unit] of memory is the binary digit, called bit. A bit may contain a 0 or a 1
+    - Memories consist of a number of #alert[cells] each of which can store this piece of information
+    - Each cell has a number, called its #alert[address], by which programs can refer to it
+  ][
+    #figure(image("images/memory.png", width: 80%))
+  ]
+  
+]
+
+#slide(title:"")[]
+
+#slide(title:"")[]
+
+#slide(title:"")[]
+
+#slide(title:"")[]
+
+#slide(title:"")[]
+
+#slide(title:"")[]
