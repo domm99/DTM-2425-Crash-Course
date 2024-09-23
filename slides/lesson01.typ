@@ -655,19 +655,61 @@
 ]
 
 #slide(title:"Compilers vs Interpreters")[
-  #figure(image("images/com-inter.png", width:90%))
+  #figure(image("images/com-inter.png", width:80%))
 ]
 
 #focus-slide[
   Operating Systems
 ]
 
-#slide(title:"")[]
+#slide(title:"Introduction")[
+  - #alert[Operating systems] (OS) are one of the most essential components of modern computers
+  - They #alert[manage computer hardware and software resources], and provide services for computer programs
+  - Without an OS, a computer cannot function efficiently
+]
 
-#slide(title:"")[]
+#slide(title:"What is an OS?")[
+  - An operating system is software #alert[that acts as an intermediary] between computer hardware and users
+  - It #alert[manages hardware components] such as the CPU, memory, and input/output devices, ensuring they are used efficiently
+  - it allows users to interact with the computer through user interfaces such as command-line interfaces (CLI) or graphical user interfaces (GUI)
+  - Examples of operating systems include Windows, macOS, Linux, Android, and iOS
+]
 
-#slide(title:"")[]
+#slide(title:"Main Functions of an OS")[
+  - #alert[Process Management:] It manages the execution of processes, schedules tasks, and handles multitasking.
+  - #alert[Memory Management:] It allocates and deallocates memory spaces as needed by different programs and processes
+  - #alert[File System Management:] It organizes, stores, retrieves, and manages data in files on storage devices
+  - #alert[Device Management:] It manages input and output devices such as keyboards, printers, and monitors
+  - #alert[Security and Protection:] The OS ensures the integrity and confidentiality of data by managing access permissions and protecting the system from external threats
+]
 
-#slide(title:"")[]
+#slide(title:"Types of OS")[
+  - There are several types of operating systems designed for different purposes:
+    - #alert[Desktop Operating Systems:] Used on personal computers. Examples include Windows, macOS, and Linux
+    - #alert[Mobile Operating Systems:] Designed for smartphones and tablets. Examples are Android and iOS
+    - #alert[Embedded Operating Systems:] Found in devices like cars, appliances, and industrial machines, often with real-time processing needs
+    - #alert[Real-Time Operating Systems (RTOS):] Provide immediate processing for applications that require quick responses, such as medical systems or aircraft controls
+    - #alert[Network Operating Systems:] Manage and coordinate network resources, commonly used in servers and data centers
+]
 
-#slide(title:"")[]
+#slide(title:"Architecture of an OS")[
+  - The architecture of an operating system is typically divided into layers:
+    - #alert[Kernel:] it manages the system hardware and acts as a bridge between the hardware and application layers. It controls low-level tasks like memory management, process scheduling, and device I/O
+      - #alert[Monolithic Kernel]: Large and complex, with many functions built into the kernel itself (e.g., Linux)
+      - #alert[Microkernel:] Minimalist design where only essential services run in the kernel, with other services running in user space (e.g., Minix)
+  - #alert[User Space:] This includes everything outside the kernel, where user applications and processes run. The user interacts with the operating system through interfaces provided in this space
+]
+
+#slide(title:"Process Management")[
+  - #alert[A process is an instance of a program in execution]. The OS is responsible for managing processes in the following ways:
+    - #alert[Process Scheduling:] Determines the order in which processes are executed. Common algorithms include:
+      - #alert[First Come First Served (FCFS):] Processes are executed in the order they arrive
+      - #alert[Round-Robin (RR):] Each process gets a fixed time slice to execute
+      - #alert[Priority Scheduling:] Processes with higher priorities are executed before lower-priority ones
+    - #alert[Creation and Termination:] The OS creates processes through system calls and terminates them once completed
+    - #alert[Multitasking and Concurrency:] The OS can switch between multiple processes, giving the illusion of parallel execution on single-core systems, or actual parallelism on multi-core systems
+]
+
+#slide(title:"Disclaimer")[
+  Most of the slides are based on the slides of prof. Guido Borghi
+]
