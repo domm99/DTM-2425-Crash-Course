@@ -443,6 +443,59 @@
   - In this way they overcome the von Neumann bottleneck (a instruction fetch and a data operation cannot occur at the same time) that limit the performance of the system
 ]
 
+#focus-slide[
+  How have computers evolved over time? 
+]
+
+#slide(title:"Generations of computers")[
+  - We define different #alert[generations] of computers relying on the #alert[technology] used
+  - Evolution of switches is the evolution of generations
+    - #underline[Mechanical]
+    - #underline[Electromechanical]
+    - #underline[Electronics]
+  #v(3em)
+  #place(right, dy:-5.5em)[
+    #figure(image("images/hdd-big.png", width:35%))
+  ]
+]
+
+#slide(title:"0th Generation: Mechanical Computers (1642-1945)")[
+  - In 1642, Blaise Pascal was the first person to build a working #alert[calculating machine]
+    - He built this calculator to help his father with taxes
+  - The programming language _Pascal_ is named in his honor
+  - The name of the calculator was Pascalina and was a sort of #alert[simple calculator]
+    - #underline[Entirely mechanical]
+    - Powered by a hand-operated crank
+    - Only addition and subtraction operations (multiplication and division through repeated additions or subtractions)
+  - Thirty years later the German mathematician von Leibniz built the #alert[Stepped Reckoner]
+    - #underline[Multiplication and division] operations added
+    - The #underline[first real calculator]
+    - First example of #underline[memory]
+  #place(right, dy:-2.5em)[
+    #figure(image("images/stepped.png", width:35%))
+  ]
+]
+
+#slide(title:"0th Generation: Mechanical Computers (1642-1945)")[
+  - In 1834 Charles Babbage built the #underline[Analytical Engine]
+    - Entirely #underline[mechanical]
+    - It was #underline[general purpose] machine, i.e. it was not specialized to perform only single operations
+    - It read instructions from#underline[ punched cards] and carried them out
+  - #alert[The programming age was born]: punching a different program on the input cards, it was possible to have the analytical engine perform different computations.
+  - To produce the (simple) software, Babbage hired a young woman named Ada Lovelace
+  - #alert[Ada Lovelace was thus the world's first computer programmer]
+
+  #figure(image("images/lovelace.png", width:42%))
+]
+
+#slide(title:"")[]
+
+#slide(title:"")[]
+
+#focus-slide[
+  Operating Systems
+]
+
 #slide(title:"")[]
 
 #slide(title:"")[]
