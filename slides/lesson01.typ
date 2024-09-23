@@ -586,10 +586,77 @@
   - The real fifth generation is more a #alert[paradigm shift] than a specific new architecture
   - We can refer to this generation also with _Ubiquitous Computing_ or _Pervasive Computing_
   - rather than having a _small number of very powerful computing devices_ in your life (laptops, tablets, phones, music players and so on), you might have a _large number of smart devices_ which are perhaps less powerful (“simpler”)
-  #figure(image("images/iot.png", width:50%))
+  #figure(image("images/iot.png", width:35%))
 ]
 
-#slide(title:"")[]
+#focus-slide[
+  How can we communicate with a computer?
+]
+
+#slide(title:"Communicating with computers")[
+  - #underline[Computers understand only the machine language] (a sequence of binary symbols 0 and 1)- 
+  - Why? Simplifying, with the machine language we are #underline[turning on/off] the circuits and functional units inside the circuits of a compute
+
+  #figure(image("images/communication.png", width:45%))
+]
+
+#slide(title:"Machine language")[
+  - #alert[Machine Language:] a set of #underline[instructions directly executed by the hardware]
+    - Machine language is a (very) #underline[low-level programming language], that generally consists of numbers, i.e. the binary code
+    -  The execution is #underline[extremely fast], but the instruction set is limited due to cost and complexity
+    - Unfortunately, the #alert[machine language is really hard for humans]
+
+    #figure(image("images/machinelanguage.png", width:30%))
+]
+
+#slide(title:"Machine Language")[
+  - The #alert[first generation of software] (late 1940s) had its #underline[instructions written directly in machine language]
+  -  Unfortunately, #alert[programming in machine language is extremely difficult], especially when programs become more complex
+  - A #alert[solution] for the machine language complexity can be represented by the use of an #alert[intermediate language] that is #alert[comprehensible by humans]
+  - Then, we have to #alert[translate this new language] into the machine language
+]
+
+#slide(title:"Machine Language conversion")[
+  #align(center)[ The same happens with #alert[humans] ]
+
+  #figure(image("images/translation.png", width:75%))
+]
+
+#slide(title:"Assembly Language")[
+  - One of the first solutions is to use the #alert[assembly language]
+  - Indeed, in assembly language instructions can be represented with the help of #alert[mnemonics] (such as mov, add, sub, end. ...) that are #alert[human-readable commands]
+
+  #figure(image("images/assembly.png", width:40%))
+
+  - Unfortunately, #alert[also the assembly language became hard to be used] by programmers to write more and more complex programs
+]
+
+#slide(title:"Assembly Language")[
+  - Why? Because having a more human-friendly language #alert[we started to build more complex systems] which however required even more friendly languages
+  - The solution is to create #alert[a new “easier” language] (L1) and a «translator» to translate the easier language to the assembly (or machine) language (L0). L1 will be runned on a sort of #alert[Virtual Machine] (e.g., Java Virtual Machine)
+]
+
+#slide(title:"Multilevel Machines")[
+  #align(center)[This solution can be #alert[repeated] again to create #alert[new higher-level languages] easier for humans and with respect to the application to be developed]
+
+  #figure(image("images/multilevel.png", width:80%))
+]
+
+#slide(title:"Compilers vs Interpreters")[
+  - There are two types of translators: #alert[compilers] and #alert[intepreters]
+  - Both compiler and interpreters #alert[do the same job] which is converting higher level programming languages to lower logical levels
+  - However, there are some differences:
+    - #alert[Compiler]: converts the code into machine code before program run
+    - #alert[Interpreter]: convert code into machine code when the program is running (a sort of “simultaneous translation”)
+  - Compiler vs Interpreter
+    - Compiled code #underline[runs faster], since can be better optimized for a specific architecture
+    - Interpreted code runs slower but has a #underline[better portability]
+
+]
+
+#slide(title:"Compilers vs Interpreters")[
+  #figure(image("images/com-inter.png", width:90%))
+]
 
 #focus-slide[
   Operating Systems
