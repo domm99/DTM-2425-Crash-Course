@@ -418,13 +418,30 @@
   How are all these things organised inside a computer?
 ]
 
-#slide(title:"")[]
+#slide(title:"Computer architecture")[
+  - All components introduced are #alert[connected] through one or more #alert[buses]
+  - A bus is a #alert[communication system] that transfers data between components inside a computer, or even between computers
+  - Different buses since there are two types of organizations for memories (and in general computers): #alert[Von Neumann] Architecture and #alert[Harvard] Architecture
+]
 
-#slide(title:"")[]
+#slide(title:"Von Neumann Architecture")[
+  - It is a computer architecture in which the #alert[memory stores both data and instructions]
+  - Programs instructions and data are stored in the RAM of the system
+  - This architecture is simpler that the Harvard architecture
+  
+  #figure(image("images/von.png", width: 35%))
+]
 
-#slide(title:"")[]
+#slide(title:"Harvard Architecture")[
+  It is a computer architecture in which #alert[there is a separate storage and signal pathways (bus) for instructions and data]
+  
+  #figure(image("images/harvard.png", width: 45%))
+]
 
-#slide(title:"")[]
+#slide(title:"Von Neumann vs Harvard")[
+  - #alert[Recent processors use the von Neumann architecture] BUT, for performance reasons, #underline[they usually have a separate processor memories (caches) for the instructions and data]
+  - In this way they overcome the von Neumann bottleneck (a instruction fetch and a data operation cannot occur at the same time) that limit the performance of the system
+]
 
 #slide(title:"")[]
 
