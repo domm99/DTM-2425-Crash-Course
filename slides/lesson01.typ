@@ -108,10 +108,10 @@
     - The software is #alert[equivalent], from a logical point of view, to the hardware
     - Hardware can also be #alert[simulated] in software and any operation performed by software can also #alert[be built directly] into the hardware
     - The decision to put certain functions in hardware and others in software is based on:
-      - Cost, HW > SW
-      - Speed, HW > SW
-      - Reliability, HW > SW
-      - Frequency of expected changes, HW < SW
+      - #underline[Cost], HW > SW
+      - #underline[Speed], HW > SW
+      - #underline[Reliability], HW > SW
+      - #underline[Frequency of expected changes], HW < SW
 ]
 
 #slide(title:"Hardware vs Software (2)")[
@@ -281,6 +281,148 @@
   ]
   
 ]
+
+#slide(title:"Memory (2)")[
+  - In a computer, there are 2 types of memory:
+    - #alert[Primary memory]
+      -  It includes the _Random Access Memory_ (RAM) and the _Read Only Memory_ (ROM)
+      -  Usually primary memory is very #underline[fast] and #underline[small-sized] and located #underline[close to the processor]
+      - RAM is _#underline[volatile]_ (data disappear when the power goes out)
+      - ROM is #underline[non-volatile] (the information is maintained even if the component loses power).
+    - #alert[Secondary memory]
+      - It includes _HDD_ (Hard Disk) and _SSD_ (Solid State Disk)
+      - Usually is #underline[slower] than RAM/ROM
+      - It has a #underline[greater capacity] than primary memory (1, 2, 8 TB vs 64, 128, 256 GB)
+      - It is #underline[not close] to the processor (it can be located in an external separate storage device)()
+      - It is #underline[not volatile]
+]
+
+#slide(title:"Random Access Memory")[
+  #align(center)[ 
+    RAM is the #alert[hardware location] in a computer where #underline[programs], the #underline[operating system] and #underline[data in current use] are kept so that they can be #underline[quickly reached] by the computer's processor 
+  ]
+
+   #figure(image("images/ram.jpg", width: 60%))
+]
+
+#slide(title:"Random Access Memory (2)")[
+  - Random Access Memory since #alert[any storage location can be accessed directly] in the same amount of time
+  - There are 2 types of RAM
+    - #alert[Static RAM] (SRAM)
+    - #alert[Dynamic RAM] (DRAM)
+  - Static vs Dynamic
+    - Static is #underline[faster]
+    - Dynamic is #underline[less expensive]
+    - Dynamic has a #underline[less power consumption]
+  - SRAM is used to create the CPU's speed-sensitive cache, while DRAM forms the larger system RAM space
+]
+
+#slide(title:"Read Only Memory")[
+  - It is used as the computer begins to #alert[boot up], in order to #underline[transfer data from the hard disk to the RAM memory]
+  - It is used to #underline[store the start-up instructions] for a computer
+  - When you press the power button, the RAM memory is #underline[empty] 
+- #alert[It is important to store the essential start-up instructions in a ROM memory]
+    - These start-up instructions are the Basic Input-Output System (BIOS) or the more recent Unified Extensible Firmware Interface (UEFI)
+    - The BIOS instructs the CPU to start reading code at specific memory locations
+    - In some modern devices, the BIOS also check the components through the Power-On Self-Test (POST)
+]
+
+#slide(title:"Read Only Memory")[
+  - There are #alert[3 different types] of ROM
+    - #underline[Programmable Read Only Memory] (PROM), also known as One Time Programmable (OTP)
+    - #underline[Erasable Programmable Read Only Memory] (EPROM), erasable through ultraviolet light source
+    - #underline[Electrically Erasable Programmable Read-Only Memory] (EEPROM), erasable through electricity.
+
+   #figure(image("images/eprom.jpeg", width: 30%))
+]
+
+#slide(title:"Hard Disks")[
+  #side-by-side[
+    - It #alert[stores and retrieves] digital data using #underline[magnetic storage] and one or more #underline[rigid rotating platters] coated with magnetic material
+    - Data are stored in #alert[logic units] defined as: sectors, clusters, tracks and cilinders
+    - It is an #alert[electro-mechanical] data storage device, composed by many components
+    - Data, in terms of 0/1, are stored as #alert[magnetic signals] read and written by a head
+  ][
+    #figure(image("images/hdd.png", width: 80%))
+  ] 
+]
+
+#slide(title:"HDD vs SSD")[
+  - A #alert[Solid State Disk] (SSD) is a #underline[completely electronic] memory based on flash memories
+  - Pro of SSDs with the respect of HDDs
+    - #underline[Higher speed]
+      - Access Time (time spent in retrieving data): μs vs ms
+      - Transfer Time (time spent in transferring data): MB vs GB
+    - #underline[SSD are more reliable]
+      - No mechanical parts in movement
+      - Higher impact resistance and no heat produced
+    - BUT
+      - HDDs are chaper: 0,1€/GB vs 0,02€/GB (up to 2020)
+      - SSDs have minor life in case of frequent writing operation
+      - It is very hard retrieve information from broken SSD (easier for HDDs)
+]
+
+
+#slide(title:"Recap: memory organization")[
+  #figure(image("images/mem-org.png", width: 70%))
+]
+
+#slide(title:"Memory hierarchy")[
+  - We can define a #alert[memory hierarchy] based on the
+    - #underline[Speed]: the amount of time that it takes the memory to receive a request and then read or write data
+    - #underline[Size]: the amount of the space that can be written on the memory
+    - #underline[Cost]
+
+  #figure(image("images/mem-hier.png", width: 41%))
+]
+
+#slide(title:"Cache memory")[
+  - Historically, #alert[CPUs have always been faster than memories]. Memory is a #underline[bottleneck] for the CPU performance
+  - Actually, the problem is both #alert[technology and economics]
+    - Engineers know how to build memories that are as fast as CPUs, BUT #underline[they have to be located on the CPU chip]
+    - Going over the bus to memory is #underline[very slow]
+    - Putting a large memory on the CPU chip makes it #underline[bigger], which makes it #underline[more expensive], and even if cost were not an issue, there are #underline[limits to how big a CPU chip can be made]
+  - The #alert[solution] is having a #underline[small amount of fast memory] and a #underline[large amount of slow memory]
+  - This small and fast memory is called #alert[cache]
+
+  #place(right, dy:-0.5em)[
+    #figure(image("images/cache.png", width:25%))
+  ]
+]
+
+#slide(title:"Cache memory (2)")[
+  - The basic idea behind a cache is simple: the #alert[most heavily used memory words are kept in the cache]. When the CPU needs a word, it first looks in the cache. Only if the word is not there does it go to main memory
+  - What are the “most heavily used memory words”? We can rely on 2 #underline[principles]:
+    - #alert[Spatial locality]: if a particular storage location is referenced at a particular time, then it is likely that nearby memory locations will be referenced in the near future
+    - #alert[Temporal locality]: if at one point a particular memory location is referenced, then it is likely that the same location will be referenced again in the near future
+  - We have a #alert[hit] when a word is in the cache, otherwise there is a miss
+]
+
+#slide(title:"Cache memory (3)")[
+  - Some issues 
+    - #alert[Cache size]: the bigger the cache, the better it performs, but also the more it costs
+    - #alert[Cache organization]: if the cache is full, how to define which spaces to free? We need specific policies
+    - #alert[Number of caches]: usually chips have a primary (L1) cache on chip, a secondary (L2) cache off chip but in the same package, and a third (L3) cache still further away
+  - #underline[Different levels of cache memory for different speeds], since they are closer to the CPU and built with different technologies
+
+  #place(right, dy:-0.5em)[
+    #figure(image("images/cache-levels.png", width:30%))
+  ]
+]
+
+#slide(title:"Cache memory (4)")[
+   #figure(image("images/cache-i7.png", width: 70%))
+]
+
+#focus-slide[
+  How are all these things organised inside a computer?
+]
+
+#slide(title:"")[]
+
+#slide(title:"")[]
+
+#slide(title:"")[]
 
 #slide(title:"")[]
 
