@@ -293,7 +293,7 @@
       - It includes _HDD_ (Hard Disk) and _SSD_ (Solid State Disk)
       - Usually is #underline[slower] than RAM/ROM
       - It has a #underline[greater capacity] than primary memory (1, 2, 8 TB vs 64, 128, 256 GB)
-      - It is #underline[not close] to the processor (it can be located in an external separate storage device)()
+      - It is #underline[not close] to the processor (it can be located in an external separate storage device)
       - It is #underline[not volatile]
 ]
 
@@ -488,7 +488,106 @@
   #figure(image("images/lovelace.png", width:42%))
 ]
 
-#slide(title:"")[]
+#slide(title:"1st Generation: Vacuum Tubes (1945-1955)")[
+  - #alert[Passage from mechanic to electricity]
+  - Key problem: how to handle and memorize electrical binary signals (0/1)
+    - It is possible to perform arithmetic operations thanks to the Boolean Algebra
+    - #underline[Binary signal perfectly suits with electricity]
+      - 1 is a wire with electricity, or rather an open switch
+  - Therefore, the research focused on different types of electromechanical and electrical switches (realys, vacuum tubes, transistors, atoms, ... )
+  #figure(image("images/transistor.png", width:60%))
+]
+
+#slide(title:"1st Generation: Vacuum Tubes (1945-1955)")[
+  - The main stimulus for the electronic 1st generation computers was #underline[World War II]
+    - Goal: decode German messages produced by the ENIGMA 
+    - Solution: the British government set up a top secret laboratory that built an electronic computer
+    - The name was Colossus, projected by Alan Turing in 1944
+      - Based on vacuum tubes
+      - It was a general purpose calculator
+
+  #figure(image("images/turing.png", width:60%))
+]
+
+#slide(title:"1st Generation: Vacuum Tubes (1945-1955)")[
+  - #alert[ENIAC] (Electronic Numerical Integrator and Computer)
+    - Built in 1946 in USA, to compute range tables for heavy artillery
+    - It was the first real #underline[programmable, electronic, general-purpose digital computer]
+    - 30 tons and consumed 140 kW of power
+    - 18k vacuum tubes and 1.5k relays
+  - #alert[IAS] (Institute for Advanced Study) machines
+    - Built in Princeton (USA) in 1951
+    - Also known as #underline[Neumann Machine], since for the first time data and instructions were stored in the memory
+    - Before that, the programmers have to set all the switches and cables to program the computer, since the program was not stored in memory
+]
+
+#slide(title:"Bugs")[
+  - Problems with the high number of vacuum tubes:
+    - #alert[Malfunctions] (vacuum tubes are easily broken)
+    - #alert[Heat dissipation], that requires the use of air conditioning in the computers' rooms
+    - #alert[NB] Also today the heat dissipation is a key element in data centers and server rooms, since this aspect is related to the power consumption and failure prevention (a GPU can reach up to 90 - 100°C at a full load)
+  - The use of the term #alert[“bug”] to describe #alert[software errors] is common
+  - The term derives from the fact that in 1946 operators traced an error in the Mark II to a #alert[moth trapped in a relay], coining the term bugs
+  - Thus, #alert[debugging] is the process of finding and resolving bugs within computer programs, software, or systems
+]
+
+#slide(title:"2nd Generation: Transistors (1955-1965)")[
+  - 1948: _John Bardeen, Walter Brattain, and William Shockley_ invented the #alert[transistor] in Bell Labs
+  - They were awarded the 1956 Nobel Prize in physics
+  - Transistor vs Vacuum Tube
+    - Transistors are much #underline[more durable]
+    - Transistors are much #underline[smaller]
+    - Transistors require much #underline[less voltage] to function
+
+  #place(right, dy:-4.5em)[ #figure(image("images/trans.jpg", width:30%)) ]
+]
+
+#slide(title:"2nd Generation: Transistors (1955-1965)")[
+  - #alert[ PDP-1] (1960): on its screen, MIT students programmed the first computer game (Spacewar)
+  #figure(image("images/pdp.png", width:70%))
+  - #alert[Olivetti]: italian company leader in the computer market in '60s 
+    - #alert[Programma-101]: first programmable #alert[desktop] computer (also used by NASA for the Apollo program!)
+  #place(right, dy:-0.5em)[ #figure(image("images/programma.jpg", width:20%)) ]
+]
+
+#slide(title:"3rd Generation: Integrated Circuits (1965-1980)")[
+  - This generation is still based on transistors, but now they are “organized” in a circuits with a #alert[large amount] of them (#alert[Integrated Circuits], ICs)
+  - #alert[Silicon Integrated Circuits]
+    - Dozens of transistors put on a single chip
+  - IC made it possible to build computers that were: 
+    - #underline[Smaller]
+    - #underline[Faster]
+    - #underline[Cheaper]
+  #place(right, dy:-3.5em)[ #figure(image("images/ic.jpg", width:35%)) ]
+]
+
+#slide(title:"3rd Generation: Integrated Circuits (1965-1980)")[
+  - #alert[IBM 360] (1964): used new integrated circuit technology 
+    - Introduces the paradigm of #alert[multiprogramming]: several programs are stored in memory, so when one was waiting for input/output to complete, another could compute 
+    - Therefore, #underline[CPU utilization is improved]
+  
+  #figure(image("images/ibm360.png", width:35%))
+]
+
+#slide(title:"4th Generation: Very Large Scale Integration (1980-?)")[
+  - 1971: the italian _Federico Faggin_ created the first #underline[microprocessor], the Intel 4004
+  - #underline[Millions] (not dozen) of transistors on a single chip. This development soon led to #underline[smaller] and #underline[faster] computer: the beginning of the #alert[Personal Computer (PC)] era
+  #figure(image("images/faggin.png", width:55%))
+
+  #side-by-side[
+    - #alert[IBM 5150] (IBM PC - 1981)
+    - Operating System: MD-DOS (developed by a small company owned by _Bill Gates_…)
+  ][
+    #figure(image("images/bill.png", width:50%))
+  ]
+]
+
+#slide(title:"5th Generation: Invisible Computers")[
+  - The real fifth generation is more a #alert[paradigm shift] than a specific new architecture
+  - We can refer to this generation also with _Ubiquitous Computing_ or _Pervasive Computing_
+  - rather than having a _small number of very powerful computing devices_ in your life (laptops, tablets, phones, music players and so on), you might have a _large number of smart devices_ which are perhaps less powerful (“simpler”)
+  #figure(image("images/iot.png", width:50%))
+]
 
 #slide(title:"")[]
 
