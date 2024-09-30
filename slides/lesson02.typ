@@ -141,11 +141,305 @@
   What do we need in a programming language?
 ]
 
-#slide(title: "Variables")[]
+#slide(title: "Variables")[
 
-#slide(title: "Branching")[]
+  - Containers for #alert[storing] data values
+  - No need to declare types, Python infers the type
+```Python
+x = 10
+name = "Alice"
+is_active = True
 
-#slide(title: "Looping")[]
+```
+  - Common #underline[Primitive] Data Types:
+    - int: Integer (e.g., ```python x = 10```)
+    - float: Floating-point number (e.g., ```python pi = 3.14```)
+    - str: String (e.g., ```python name = "Alice"```)
+    - bool: Boolean (e.g., ```python is_active = True```)
+
+]
+
+#slide(title: "Are strings primitive data types?")[
+  - No, a string is a #alert[sequence of characters] enclosed within single (') or double (") quotes
+  - Strings in Python are immutable, meaning once created, they cannot be changed
+  - Different ways to declare strings:
+    - Single-quoted strings
+    - Double-quoted strings
+    - Multi-line strings (using triple quotes)
+```Python
+name = 'Alice'
+greeting = "Hello, World!"
+message = """This is a
+multi-line string."""
+
+```
+]
+
+#slide(title: "String Indexing and Slicing")[
+  - Strings are indexed starting from 0
+```Python
+text = "Python"
+print(text[0])  # 'P'
+print(text[-1])  # 'n' (negative indexing)
+```
+- Extract a #alert[substring] by specifying a start and end index
+```Python
+text = "Python"
+print(text[0:3])  # 'Pyt'
+print(text[1:])   # 'ython'
+print(text[:4])   # 'Pyth'
+```
+]
+
+#slide(title:"Common String Operations")[
+  - Joining two or more strings using the + operator.
+```python
+first_name = "John"
+last_name = "Doe"
+full_name = first_name + " " + last_name
+print(full_name) #John Doe
+```
+
+  - Repeat a string using the ```python *``` operator.
+
+```python
+word = "Hi! "
+print(word * 3)  #'Hi! Hi! Hi!'
+```
+
+  - Check if a substring exists within a string using the ```python in``` keyword
+
+```python
+message = "Welcome to Python"
+print("Python" in message)  #True
+```
+]
+
+#slide(title:"Methods on Strings")[
+```Python
+text = "I love Java"
+new_text = text.replace("Java", "Python")
+print(new_text)  # 'I love Python'
+
+text = "apple,banana,cherry"
+fruits = text.split(",")
+print(fruits)  # ['apple', 'banana', 'cherry']
+
+words = ["Hello", "world"]
+sentence = " ".join(words)
+print(sentence)  # 'Hello world'
+```
+#text(size: 0.85em)[
+#arrow And many more! Check out the documentation #link("https://python-reference.readthedocs.io/en/latest/docs/str/")
+]
+
+]
+
+#slide(title: "Arithmetic Operators")[
+
+  #side-by-side[
+  - ```python + ```: Addition
+  - ```python - ```: Subtraction
+  - ```python * ```: Multiplication
+  - ```python / ```: Division
+  - ```python // ```: Floor Division
+  - ```python % ```: Modulus (remainder)
+  ][
+```Python
+a = 10 + 5  # 15
+c = 7 / 2   #3.5
+d = 7 // 2  #3
+b = 7 % 2   # 1
+```
+]
+
+]
+
+#slide(title: "Comparison Operators")[
+
+  #side-by-side[
+  - ```python == ```: Equals
+  - ```python != ```: Not Equals
+  - ```python > ```: Greater Than
+  - ```python < ```: Less Than
+  - ```python >= ```: Greater or Equals Than
+  - ```python <= ```: Less or Equals Than
+  ][
+```Python
+10 == 'Alice'  # False
+10 != 'Alice'  # True
+7 > 2          # True
+```
+]
+
+]
+
+#slide(title: "Branching")[
+  - Use conditional statements to execute code based on #alert[conditions]
+
+#side-by-side[
+```Python
+x = 10
+if x > 5:
+    print("x is greater than 5")
+else:
+    print("x is less than 5")
+
+
+
+```
+][
+```Python
+x = 10
+if x > 5:
+    print("x is greater than 5")
+elif x == 5:
+    print("x is equal to 5")
+else:
+    print("x is less than 5")
+
+```
+]
+
+]
+
+#slide(title: "Non-Primitive Data Types")[
+
+  - #alert[Non-Primitive Data Types] are more complex data structures that can store multiple values or more complex forms of data
+  - Unlike primitive types (like int, float, bool, str), non-primitive types can hold collections of data and have built-in methods for data manipulation
+  - Common #underline[Non-Primitive] Data Types in Python:
+    - List
+    - Tuple
+    - Set
+    - Dictionary
+  - #alert[Mutable or Immutable:] Some types can be changed after creation (like lists), while others cannot (like tuples)
+]
+
+#slide(title: "List")[
+  - #alert[Ordered], #alert[mutable] collection of elements
+  - Can store elements of #alert[different] data types
+  - Elements can be #alert[repeated]
+```Python
+fruits = ["apple", "banana", "cherry"] #All the elemets have the same type
+l = [10, 14, 10, "car", True]          #But this is also ok
+print(fruits[0])                       #apple
+```
+  - We have #alert[methods] to modify lists
+```Python
+fruits.append("mango")  # ["apple", "banana", "cherry", "mango"]
+```
+]
+
+#slide(title: "Tuple")[
+  - #alert[Ordered], #alert[immutable] collection of elements
+  - Used when you want to store data that should not change
+  - Can store elements of #alert[different] data types
+  - Elements can be #alert[repeated]
+```Python
+coordinates = (10.5, 20.3)
+t = (10, 'Hello', False)
+```
+]
+
+#slide(title: "Set")[
+  - #alert[Unordered] collection of #alert[unique] elements
+  - Used to store #alert[non-duplicate] data
+```python
+unique_numbers = {1, 2, 3, 4}
+unique_numbers.add(4)
+print(unique_numbers) # {1, 2, 3, 4}
+unique_numbers.add(5)
+print(unique_numbers) # {1, 2, 3, 4, 5}
+```
+
+]
+
+#slide(title: "Dictionary")[
+  - Collection of #alert[key-valu]e pairs
+  - Keys are #alert[unique], and values can be of any type
+```python
+person = {"name": "Alice", "age": 25}
+print(person["name"]) #Alice
+print(person["age"])  #25
+person["age"] = 28
+print(person["age"])  #28
+```
+]
+
+#slide(title: "Looping")[
+  - #alert[For Loop:] used to iterate over a sequence (list, string, range, etc.)
+```python
+numbers = range(5) #[0,1,2,3,4]
+for i in numbers:
+    print(i)  
+```
+  - #alert[While Loop:] continues until the condition becomes False
+```python
+count = 0
+while count < 5:
+    print(count)
+    count += 1
+```
+]
+
+#slide(title: "Functions")[
+  - A function is a #alert[block of reusable code] that performs a specific task
+```python
+def greet(name):
+    return f"Hello, {name}!"
+```
+  - How do we call a function?
+```Python
+greet("Alice")
+```
+]
+
+#slide(title: "Built-in functions")[
+    - There are a lot of #alert[built-in] utility functions
+```Python
+print("Hello DTM!")   #Hello DTM!
+len("Hello DTM!")     #10
+type("Hello DTM!")    #String
+range(5)              #[0,1,2,3,4]
+```
+]
+
+#slide(title: "Input and Output")[
+  - Use the input() function to get user input
+
+```python
+name = input("Enter your name: ")
+```
+  - Use the print() function to display output.
+```python
+x = 10
+print(f"The value of x is {x}") The value of x is 10
+```
+]
+
+#slide(title:"List Comprehension")[
+  - List Comprehension is a concise way to create lists based on existing lists or other iterable objects
+#side-by-side[
+```python
+squares = []
+for x in range(10):
+    squares.append(x ** 2)
+```
+][
+```python
+squares = [x ** 2 for x in range(10)]
+
+
+
+```
+]
+
+  - Add an if condition to include elements that satisfy the condition
+
+```python
+evens = [x for x in range(10) if x % 2 == 0] #[0, 2, 4, 6, 8]
+```
+]
 
 #focus-slide[
   History of Programming Paradigms
