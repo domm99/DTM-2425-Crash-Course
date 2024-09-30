@@ -124,6 +124,19 @@
   #arrow *Example:* consider how traffic lights control traffic flow. The light system "branches" between different colors (red, yellow, green) based on timing and traffic conditions.
 ]
 
+#slide(title: "Looping")[
+  #align(center)[
+    Looping is the process of #alert[repeating] a set of instructions until a #alert[specific condition is met] or for a #alert[predefined number of times].
+
+  ]
+
+  #v(2em)
+
+  #arrow *Example:* consider a washing machine, it repeats cycles (wash, rinse, spin) for a set number of times.
+]
+
+
+
 #focus-slide[
   What do we need in a programming language?
 ]
@@ -339,22 +352,23 @@ print(cat.speak())  # Whiskers says Meow!
     },
   align: right,
 )
-
-#show table.cell.where(x: 0): strong
-#show table.cell.where(y: 0): strong
-#table(
-  columns: 3,
-  align: center,
-  table.header(
-    [#v(10pt) Aspect #v(10pt)], [Imperative Programming], [Object-Oriented Programming]
-  ),
-  [ #v(10pt) Control Flow #v(10pt)], [Explicit (sequential, loops)],[Distributed across objects], 
-  [#v(10pt) State management #v(10pt)], [Managed through variables], [Encapsulated within objects], 
-  [#v(10pt) Modularity #v(10pt)], [Function-based], [Object-based], 
-  [#v(10pt) Code reuse #v(10pt)], [Functions and libraries], [Inheritance, polymorphism], 
-  [#v(10pt) Example #v(10pt)], [C, Python (procedural style)], [Python, Java, Kotlin], 
-)
+#align(center)[
+  #table(
+    columns: 3,
+    align: center,
+    table.header(
+      [#v(10pt) *Aspect* #v(10pt)], [*Imperative Programming*], [*Object-Oriented Programming*]
+    ),
+    [ #v(10pt) Control Flow #v(10pt)], [Explicit (sequential, loops)],[Distributed across objects], 
+    [#v(10pt) State management #v(10pt)], [Managed through variables], [Encapsulated within objects], 
+    [#v(10pt) Modularity #v(10pt)], [Function-based], [Object-based], 
+    [#v(10pt) Code reuse #v(10pt)], [Functions and libraries], [Inheritance, polymorphism], 
+    [#v(10pt) Example #v(10pt)], [C, Python (procedural style)], [Python, Java, Kotlin], 
+  )
 ]
+
+]
+
 
 
 #slide(title: "Why New Paradigms were Needed")[
