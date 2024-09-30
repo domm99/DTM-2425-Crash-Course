@@ -671,3 +671,16 @@ print(cat.speak())  # Whiskers says Meow!
   - #alert[Shift in software focus:] software has evolved to handle more complex tasks like UI design, web development, and artificial intelligence, which demand higher abstraction and modularity (OOP, functional programming)
 
 ]
+
+#focus-slide[
+  Let's try some coding in Python!
+]
+
+#slide(title:"Lab 1")[
+  #side-by-side[
+    #link("https://tinyurl.com/DTM-Lab01")
+  ][
+    #figure(image("images/DTM-Lab01.svg", width:50%))
+  ]
+ 
+]
