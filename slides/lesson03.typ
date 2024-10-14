@@ -220,3 +220,13 @@
   - #alert[Branching:] Git's lightweight branching model encourages experimentation and easy  integration of new features
   - #alert[Speed and Efficiency:] operations like committing changes, switching branches, and merging are very fast in Git compared to older VCS systems
 ]
+
+#focus-slide[Last Lab]
+
+#slide(title:"Lab 2")[
+  #side-by-side[
+    #link("https://tinyurl.com/DTM-LAB02")
+  ][
+    #figure(image("images/DTM-LAB02.svg", width:50%))
+  ]
+]
