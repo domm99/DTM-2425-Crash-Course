@@ -114,9 +114,19 @@
 
 ]
 
-#slide(title:"")[]
+#slide(title:"Advantages of Using an IDE")[
+  - #alert[Efficiency:] a one-stop solution for coding, debugging, testing, and deploying software, no need to switch between different tools
+  - #alert[Consistency:] provides a consistent development environment, reducing setup time and ensuring that code behaves the same for all team members
+  - #alert[Collaboration:] shared configurations and built-in version control integration make team-based development smoother
+  - #alert[Learning Curve:] can simplify the learning process for new developers by offering autocomplete, helpful tooltips, and built-in documentation
 
-#slide(title:"")[]
+]
+
+#slide(title:"Some Popular IDES")[
+  #figure(
+    image("images/ides.svg")
+  )
+]
 
 #slide(title:"")[]
 
