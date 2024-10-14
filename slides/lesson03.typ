@@ -64,6 +64,8 @@
     - CI/CD (Continuous Integration/Continuous Delivery)
 ]
 
+#focus-slide[IDEs]
+
 #slide(title:"IDEs")[
   #align(center)[
     _An #alert[Integrated Development Environment] (IDE) is a comprehensive software tool that provides everything a developer needs in one place. It combines a code editor, compiler/interpreter, debugger, and other useful features to facilitate the software development process._
@@ -135,6 +137,8 @@
   - #alert[Performance:] IDEs like Eclipse and IntelliJ IDEA can be heavy on system resources, while lighter editors like VS Code provide flexibility at the cost of requiring more setup for complex workflows
 ]
 
+#focus-slide[Linters and Code Formatters]
+
 #slide(title:"Linters and Code Formatters")[
   #align(center)[
     _A #alert[linter] is a tool that analyzes your source code for potential errors, bugs, style violations, or suspicious constructs. It helps enforce coding standards, improving code quality and reducing bugs before they even occur_
@@ -172,6 +176,8 @@
     - #alert[Improves readability:] well-formatted code is easier to read and maintain
 ]
 
+#focus-slide[Debugging Tools]
+
 #slide(title:"Debugging Tools")[
   #align(center)[
     _#alert[Debugging] is the process of identifying, isolating, and fixing issues or bugs in your code. Bugs can manifest as errors, incorrect logic, or unexpected behavior that disrupts the intended functionality of the program._
@@ -190,6 +196,8 @@
     - #alert[Step] through code line-by-line to see exactly how it is being executed
     - #alert[Change] variable values during execution to test different scenarios
 ]
+
+#focus-slide[Version Control System]
 
 #slide(title:"Version Control Systems")[
   #align(center)[
@@ -212,45 +220,3 @@
   - #alert[Branching:] Git's lightweight branching model encourages experimentation and easy  integration of new features
   - #alert[Speed and Efficiency:] operations like committing changes, switching branches, and merging are very fast in Git compared to older VCS systems
 ]
-
-#slide(title:"")[]
-
-#slide(title:"")[]
-
-#slide(title:"")[]
-
-#slide(title:"")[]
-
-#slide(title:"")[]
-
-#slide(title:"")[]
-
-#slide(title:"")[]
-
-#slide(title:"")[]
-
-#slide(title:"")[]
-
-#slide(title:"")[]
-
-#slide(title:"")[]
-
-#slide(title:"")[]
-
-#slide(title:"")[]
-
-#slide(title:"")[]
-
-#slide(title:"")[]
-
-#slide(title:"")[]
-
-#slide(title:"")[]
-
-#slide(title:"")[]
-
-#slide(title:"")[]
-
-#slide(title:"")[]
-
-#slide(title:"")[]
