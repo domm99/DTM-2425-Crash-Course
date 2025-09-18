@@ -1,7 +1,10 @@
-#import "@preview/polylux:0.3.1": *
-#import "@preview/fontawesome:0.1.0": *
-
+#import "@preview/touying:0.6.1": *
 #import themes.metropolis: *
+#import "@preview/fontawesome:0.5.0": *
+#import "@preview/ctheorems:1.1.3": *
+#import "@preview/numbly:0.1.0": numbly
+#import "utils.typ": *
+#import "@preview/tiaoma:0.3.0"
 
 #show: metropolis-theme.with(
   aspect-ratio: "16-9",
@@ -237,7 +240,7 @@ print(sentence)  # 'Hello world'
 
 #slide(title: "Arithmetic Operators")[
 
-  #side-by-side[
+  #components.side-by-side(columns: (1fr, 1fr), gutter: 0em)[
   - ```python + ```: Addition
   - ```python - ```: Subtraction
   - ```python * ```: Multiplication
@@ -257,7 +260,7 @@ b = 7 % 2   # 1
 
 #slide(title: "Comparison Operators")[
 
-  #side-by-side[
+  #components.side-by-side(columns: (1fr, 1fr), gutter: 0em)[
   - ```python == ```: Equals
   - ```python != ```: Not Equals
   - ```python > ```: Greater Than
@@ -277,7 +280,7 @@ b = 7 % 2   # 1
 #slide(title: "Branching")[
   - Use conditional statements to execute code based on #alert[conditions]
 
-#side-by-side[
+#components.side-by-side(columns: (1fr, 1fr), gutter: 0em)[
 ```Python
 x = 10
 if x > 5:
@@ -419,7 +422,7 @@ print(f"The value of x is {x}") The value of x is 10
 
 #slide(title:"List Comprehension")[
   - List Comprehension is a concise way to create lists based on existing lists or other iterable objects
-#side-by-side[
+#components.side-by-side(columns: (1fr, 1fr), gutter: 0em)[
 ```python
 squares = []
 for x in range(10):
@@ -677,7 +680,7 @@ print(cat.speak())  # Whiskers says Meow!
 ]
 
 #slide(title:"Lab 1")[
-  #side-by-side[
+  #components.side-by-side(columns: (1fr, 1fr), gutter: 0em)[
     #link("https://tinyurl.com/DTM-Lab01")
   ][
     #figure(image("images/DTM-Lab01.svg", width:50%))

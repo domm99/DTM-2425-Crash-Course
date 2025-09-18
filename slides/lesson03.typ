@@ -1,7 +1,10 @@
-#import "@preview/polylux:0.3.1": *
-#import "@preview/fontawesome:0.1.0": *
-
+#import "@preview/touying:0.6.1": *
 #import themes.metropolis: *
+#import "@preview/fontawesome:0.5.0": *
+#import "@preview/ctheorems:1.1.3": *
+#import "@preview/numbly:0.1.0": numbly
+#import "utils.typ": *
+#import "@preview/tiaoma:0.3.0"
 
 #show: metropolis-theme.with(
   aspect-ratio: "16-9",
@@ -224,7 +227,7 @@
 #focus-slide[Last Lab]
 
 #slide(title:"Lab 2")[
-  #side-by-side[
+  #components.side-by-side(columns: (1fr, 1fr), gutter: 0em)[
     #link("https://tinyurl.com/DTM-LAB02")
   ][
     #figure(image("images/DTM-LAB02.svg", width:50%))
