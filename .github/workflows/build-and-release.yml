@@ -45,7 +45,7 @@ jobs:
           version: 'latest'
 
       - name: Build documents
-        run: for file in `ls *typ`; do typst compile $file; done
+        run: for file in `ls slides/*typ`; do typst compile $file; done
 
       - name: Upload PDF file
         uses: actions/upload-artifact@v4.6.1
