@@ -51,7 +51,7 @@ jobs:
         uses: actions/upload-artifact@v4.6.1
         with:
           name: PDF
-          path: "*.pdf"
+          path: "slides/*.pdf"
 
       - name: Get current date
         id: date
@@ -74,5 +74,5 @@ jobs:
         if: github.ref_name == 'master'
         with:
           name: "Release — ${{ steps.autotag.outputs.tag }}"
-          files: "*.pdf"
+          files: "*slides/.pdf"
           tag_name: ${{ steps.autotag.outputs.tag }}
